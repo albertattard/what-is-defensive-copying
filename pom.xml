@@ -7,7 +7,7 @@
 	<artifactId>what-is-defensive-copying</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>What is Defensive Copying</name>
+	<name>What is Defensive Copying?</name>
 	<url>http://www.javacreed.com/${project.artifactId}/</url>
 	<inceptionYear>${project.inceptionYear}</inceptionYear>
 	<organization>
