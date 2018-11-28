@@ -1,4 +1,4 @@
-Rubik''s cube ([Wiki](http://en.wikipedia.org/wiki/Rubik's_Cube)) is quite tough to solve especially for someone inexperienced like myself.  Let say for example, you spend a couple of hours solving a given Rubik''s cube and once solved, you give it to one of your friends to see.  Nothing prevents your friend, to whom you trusted your solved Rubik's cube, from reshuffle it and thus losing all your efforts.   Something similar can happen within an application program where objects are shared with other objects (referred as recipients) and the former are unintentionally (or intentionally) modified by the latter, causing unexpected behaviour.
+Rubik's cube ([Wiki](http://en.wikipedia.org/wiki/Rubik's_Cube)) is quite tough to solve especially for someone inexperienced like myself.  Let say for example, you spend a couple of hours solving a given Rubik''s cube and once solved, you give it to one of your friends to see.  Nothing prevents your friend, to whom you trusted your solved Rubik's cube, from reshuffle it and thus losing all your efforts.   Something similar can happen within an application program where objects are shared with other objects (referred as recipients) and the former are unintentionally (or intentionally) modified by the latter, causing unexpected behaviour.
 
 Defensive copying is a technique which mitigates the negative effects caused by unintentional (or intentional) modifications of shared objects.  As the title indicates, instead of sharing the original object, we share a copy of it and thus any modification made to the copy will not affect the original object.
 
@@ -100,9 +100,9 @@ The above program retrieves the array of integers using the `getValues()` method
 
 The above program runs without any errors and produces the following output
 
-<pre>
--10, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-</pre>
+```
+[-10, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+```
 
 Despite our validation, the first element of the array is negative.  This means that we are able add negative values and thus bypassing all implied validations or security measures.  While the example used here is kept very basic in order to focus on the problem, the implications of such scenario can be quite drastic.  Tests on the `setValue()` will not reveal any weaknesses in this regards and the developers that are not aware of such problem may not realise that the issue is elsewhere.  In fact, the `setValue` is not to blame here.  This issue is caused by the simplest method of them all, the `getValues()` method.
 
