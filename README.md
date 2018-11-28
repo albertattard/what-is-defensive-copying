@@ -140,7 +140,7 @@ import java.util.Arrays;
 public class Data {
 
   public int[] getValues() {
-    return <span class="highlight">Arrays.copyOf(values, values.length)</span>;
+    return Arrays.copyOf(values, values.length);
   }
 
   /* Methods removed from brevity */
